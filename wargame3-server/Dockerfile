@@ -29,7 +29,5 @@ COPY docker-entrypoint.sh /
 WORKDIR /srv/wargame/wargame3_server/
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
-EXPOSE 10001 10001/udp
-
 USER wargame
 CMD ["wargame"]
