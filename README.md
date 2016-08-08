@@ -1,6 +1,9 @@
 # wargame-docker
 Dockerized Wargame: AirLand Battle and Wargame: Red Dragon dedicated servers.
 
+To run any Wargame dedicated server, you have to [request a download link and
+key from Eugen](http://forums.eugensystems.com/viewtopic.php?f=188&t=43873).
+
 # build
 The Dockerfiles have a mandatory `EUGEN_SERVER_DOWNLOAD_URL` argument, which you
 get from Eugen when you request a dedicated server key.
@@ -11,8 +14,8 @@ get from Eugen when you request a dedicated server key.
 Forward a port for the server (TCP and UDP) and set these mandatory environment
 variables:
 
-* `login`: EugenNet login
-* `dedicated_key`: dedicated server key from Eugen
+* `login`: your EugenNet login username
+* `dedicated_key`: your dedicated server key from Eugen
 * `ip`: public-facing IP address
 * `port`: TCP/UDP port number of the server - this must match the one reachable
    at `ip`
