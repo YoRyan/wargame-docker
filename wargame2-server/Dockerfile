@@ -12,14 +12,12 @@ RUN dpkg --add-architecture i386 \
 
 ARG EUGEN_SERVER_DOWNLOAD_URL
 
-RUN apt-get update && apt-get install -y \
-    curl \
+RUN apt-get update && apt-get install -y curl \
   && groupadd -r wargame && useradd -r -d /srv/wargame -m -g wargame wargame \
   && mkdir -p /srv/wargame/wargame2_server \
   && curl --insecure "$EUGEN_SERVER_DOWNLOAD_URL/wargame2_server.tar.gz" | tar xz -C /srv/wargame/wargame2_server \
   && chown -R wargame:wargame /srv/wargame/wargame2_server \
-  && apt-get remove -y --purge \
-    curl \
+  && apt-get remove -y --purge curl \
   && apt-get autoremove -y --purge \
   && rm -rf /var/lib/apt/lists/*
 
