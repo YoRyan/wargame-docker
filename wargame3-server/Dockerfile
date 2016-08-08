@@ -2,7 +2,7 @@ FROM debian:jessie
 MAINTAINER Ryan Young <rayoung@utexas.edu>
 
 RUN dpkg --add-architecture i386 \
-  && apt-get update && apt-get install -y \
+  && apt-get update && apt-get install -y --no-install-recommends \
     libc6-i386 \
     libssl1.0.0:i386 \
     libstdc++6:i386 \
@@ -12,7 +12,7 @@ RUN dpkg --add-architecture i386 \
 
 ARG EUGEN_SERVER_DOWNLOAD_URL
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     bzip2 \
     curl \
   && groupadd -r wargame && useradd -r -d /srv/wargame -m -g wargame wargame \
