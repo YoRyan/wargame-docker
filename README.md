@@ -33,3 +33,7 @@ When passing additional command line arguments, add `wargame` in front:
 
     docker run ... -p 4242:4242 yoryan/wargame3-server wargame +rcon_port 4242 +rcon_password hunter2
 
+You can override configuration files using host mounts.
+
+    docker run ... -v /path/to/my/variables.ini:/srv/wargame/wargame3-server/variables.ini yoryan/wargame3-server
+
