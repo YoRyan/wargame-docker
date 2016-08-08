@@ -35,5 +35,5 @@ When passing additional command line arguments, add `wargame` in front:
 
 You can override configuration files using host mounts.
 
-    docker run ... -v /path/to/my/variables.ini:/srv/wargame/wargame3-server/variables.ini yoryan/wargame3-server
+    docker run ... -v /path/to/my/variables.ini:/srv/wargame/wargame3_server/variables.ini yoryan/wargame3-server
 
